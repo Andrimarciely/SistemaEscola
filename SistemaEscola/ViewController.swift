@@ -62,14 +62,19 @@ class ViewController: UIViewController {
         // TODO: Inserir Feature 1 Aqui!
         let novoColaborador: Colaborador = Colaborador(nome: nomeTextField.text ?? "", matricula: matriculaTextField.text ?? "", salario: 1000 , cargo: cargoSelecionado)
         
-        escola.self.adicionaColaborador(novoColaborador: novoColaborador)
+    let mensagem = escola.self.adicionaColaboradorComValidacao(novoColaborador: novoColaborador)
         
         // Coloque uma lista ordenada de colaboradores (apenas com os nomes) na propriedade 'outputMessage'! (Assim, a gente consegue ver que de fato o colaborador foi cadastrado)
         // Basta fazer:
-        outputMessage.text = ""
-        let nomes = escola.listaColaboradoresEmOrdemAlfabetica()
-        let nomesJuntos = nomes.joined(separator: ", ")
+        if mensagem == ""{
+            outputMessage.text = ""
+            let nomes = escola.listaColaboradoresEmOrdemAlfabetica()
+            let nomesJuntos = nomes.joined(separator: ", ")
         outputMessage.text = nomesJuntos
+        }
+        else {
+            outputMessage.text = mensagem
+        }
         // Importante deixar essa função como última porque ela reseta o sistema por estado inicial.
         resetaCadastraColaborador()
     }
