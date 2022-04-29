@@ -23,6 +23,17 @@ struct Escola {
          return gastos
      }
     
-    
-
+      // Funcionalidade 4 do sistema da escola
+      // Listar gastos mensais por cargo
+      func listaGasto(porCargo cargo: Cargo) -> String{
+          
+          var gastos : Double = 0
+          var listaDoCargo : [Colaborador]
+          
+          listaDoCargo = colaboradores.filter{ $0.cargo == cargo }
+          gastos = listaDoCargo.map{ $0.salario }.reduce(0, +)
+          
+          return "Os gastos com o cargo \(cargo.rawValue) são de R$\(gastos)."
+          
+      }
 }

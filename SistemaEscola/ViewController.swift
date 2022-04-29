@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         // Você pode utilizar a propriedade 'cargoSelecionado' para escolher listar um cargo só.
         // Coloque a mensagem na propriedade 'outputMessage'!
         // Basta fazer:
-        // outputMessage.text = "A sua mensagem aqui"
+        // outputMessage.text = escola.listaGasto(porCargo: cargoSelecionado)
         
         // Você pode também listar todos os cargos (ao invés de somente um), se assim preferir.
         // Basta fazer:
@@ -100,6 +100,10 @@ class ViewController: UIViewController {
         // let todosOsGastos = "Monitor: \(gastoCargoMonitor) \nProfessor: \(gastoCargoProfessor)\n Coordenador: \(gastoCargoCoordenador)".
         // \n = Quebra de linha
         // Não precisa seguir exatamente esse modelo. Foi só um exemplo.
+        outputMessage.text = ""
+        for cargo in Cargo.allCases{
+            outputMessage.text! += "\(escola.listaGasto(porCargo: cargo))\n"
+        }
     }
     
     @IBAction func listarQuantasPessoasExistemPorCargo(_ sender: UIButton) {
