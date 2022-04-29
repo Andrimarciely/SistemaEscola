@@ -13,7 +13,7 @@ let algunsColaboradores: [Colaborador] = [
     Colaborador(nome: "Beatriz Viana", matricula: "1", salario: 1000, cargo: .assistente),
     Colaborador(nome: "Luiz Miguel Rezende", matricula: "2", salario: 1200, cargo: .monitor)]
 
-let escola = Escola(colaboradores: algunsColaboradores)
+var escola = Escola(colaboradores: algunsColaboradores)
 
 class ViewController: UIViewController {
     
@@ -60,10 +60,16 @@ class ViewController: UIViewController {
     
     @IBAction func cadastrarColaborador(_ sender: UIButton) {
         // TODO: Inserir Feature 1 Aqui!
+        let novoColaborador: Colaborador = Colaborador(nome: nomeTextField.text ?? "", matricula: matriculaTextField.text ?? "", salario: 1000 , cargo: cargoSelecionado)
+        
+        escola.self.adicionaColaborador(novoColaborador: novoColaborador)
+        
         // Coloque uma lista ordenada de colaboradores (apenas com os nomes) na propriedade 'outputMessage'! (Assim, a gente consegue ver que de fato o colaborador foi cadastrado)
         // Basta fazer:
-        // outputMessage.text = "A sua mensagem aqui"
-        
+        outputMessage.text = ""
+        let nomes = escola.listaColaboradoresEmOrdemAlfabetica()
+        let nomesJuntos = nomes.joined(separator: ", ")
+        outputMessage.text = nomesJuntos
         // Importante deixar essa função como última porque ela reseta o sistema por estado inicial.
         resetaCadastraColaborador()
     }

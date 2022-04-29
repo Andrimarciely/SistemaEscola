@@ -57,4 +57,12 @@ struct Escola {
          return nomes
          
      }
+    // Funcionalidade 1 do sistema da escola
+    // Cadastrar novos colaboradores
+    mutating func adicionaColaborador(novoColaborador: Colaborador){
+        
+        colaboradores.append(novoColaborador)
+        
+    }
+    
 }
