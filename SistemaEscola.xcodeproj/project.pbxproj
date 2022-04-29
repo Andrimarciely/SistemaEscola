@@ -14,6 +14,9 @@
 		237BA06027B70CB300E814B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237BA05E27B70CB300E814B8 /* Main.storyboard */; };
 		237BA06227B70CB600E814B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237BA06127B70CB600E814B8 /* Assets.xcassets */; };
 		237BA06527B70CB600E814B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237BA06327B70CB600E814B8 /* LaunchScreen.storyboard */; };
+		A51BCDD5281C514500248041 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDD4281C514500248041 /* Cargo.swift */; };
+		A51BCDD7281C51F500248041 /* Colaborador.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDD6281C51F500248041 /* Colaborador.swift */; };
+		A51BCDD9281C523E00248041 /* Escola.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDD8281C523E00248041 /* Escola.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		237BA06127B70CB600E814B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		237BA06427B70CB600E814B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		237BA06627B70CB600E814B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51BCDD4281C514500248041 /* Cargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo.swift; sourceTree = "<group>"; };
+		A51BCDD6281C51F500248041 /* Colaborador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colaborador.swift; sourceTree = "<group>"; };
+		A51BCDD8281C523E00248041 /* Escola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Escola.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		237BA05727B70CB200E814B8 /* SistemaEscola */ = {
 			isa = PBXGroup;
 			children = (
+				A51BCDD3281C50F500248041 /* Model */,
 				237BA05827B70CB200E814B8 /* AppDelegate.swift */,
 				237BA05A27B70CB200E814B8 /* SceneDelegate.swift */,
 				237BA05C27B70CB200E814B8 /* ViewController.swift */,
@@ -68,6 +75,16 @@
 				237BA06627B70CB600E814B8 /* Info.plist */,
 			);
 			path = SistemaEscola;
+			sourceTree = "<group>";
+		};
+		A51BCDD3281C50F500248041 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A51BCDD4281C514500248041 /* Cargo.swift */,
+				A51BCDD6281C51F500248041 /* Colaborador.swift */,
+				A51BCDD8281C523E00248041 /* Escola.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51BCDD5281C514500248041 /* Cargo.swift in Sources */,
 				2353626427BADDD100A00A78 /* ViewControllerExtension.swift in Sources */,
+				A51BCDD7281C51F500248041 /* Colaborador.swift in Sources */,
 				237BA05D27B70CB200E814B8 /* ViewController.swift in Sources */,
+				A51BCDD9281C523E00248041 /* Escola.swift in Sources */,
 				237BA05927B70CB200E814B8 /* AppDelegate.swift in Sources */,
 				237BA05B27B70CB200E814B8 /* SceneDelegate.swift in Sources */,
 			);
@@ -220,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,13 +309,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6QDP87X9RL;
 				INFOPLIST_FILE = SistemaEscola/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = explorations.eldorado.SistemaEscola;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrimarciely.SistemaEscola;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,13 +327,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6QDP87X9RL;
 				INFOPLIST_FILE = SistemaEscola/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = explorations.eldorado.SistemaEscola;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrimarciely.SistemaEscola;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

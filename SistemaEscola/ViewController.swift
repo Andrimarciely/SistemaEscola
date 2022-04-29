@@ -8,14 +8,12 @@
 
 import UIKit
 
-// Sugiro que utilizem esse Enum pois eu já deixei preparado para os botões, mas sintam-se à vontade para alterar para uma estrutura melhor caso sintam essa necessidade.
-enum Cargo: String, CaseIterable {
-    case monitor = "Monitor"
-    case professor = "Professor"
-    case coordenador = "Coordenador"
-    case diretor = "Diretor"
-    case assistente = "Assistente"
-}
+
+let algunsColaboradores: [Colaborador] = [
+    Colaborador(nome: "Beatriz Viana", matricula: "1", salario: 1000, cargo: .assistente),
+    Colaborador(nome: "Luiz Miguel Rezende", matricula: "2", salario: 1200, cargo: .monitor)]
+
+let escola = Escola(colaboradores: algunsColaboradores)
 
 class ViewController: UIViewController {
     
@@ -84,7 +82,7 @@ class ViewController: UIViewController {
         // TODO: Inserir Feature 3 Aqui!
         // Coloque a mensagem na propriedade 'outputMessage'!
         // Basta fazer:
-        // outputMessage.text = "A sua mensagem aqui"
+        outputMessage.text = "Total de Gastos Mensais na escola é de R$\(escola.self.gastosMensais())"
     }
     
     @IBAction func listarGastosMensaisPorCargo(_ sender: UIButton) {
