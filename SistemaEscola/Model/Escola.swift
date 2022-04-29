@@ -36,4 +36,15 @@ struct Escola {
           return "Os gastos com o cargo \(cargo.rawValue) são de R$\(gastos)."
           
       }
+    
+    // Funcionalidade 5 do sistema da escola
+    // Listar quantas pessoas existem por cargo
+    func listaQuantidadeDeColaborador(porCargo cargo: Cargo) -> String{
+        
+        var quantidade = 0
+        
+        quantidade = colaboradores.filter{ $0.cargo == cargo }.count
+        
+        return "Existe(m) \(quantidade) colaborador(es) do cargo \(cargo.rawValue)."
+    }
 }

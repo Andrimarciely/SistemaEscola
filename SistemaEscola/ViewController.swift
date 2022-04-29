@@ -121,6 +121,11 @@ class ViewController: UIViewController {
         // let todosAsPessoas = "Monitor: \(gastoCargoMonitor) \nProfessor: \(gastoCargoProfessor)\n Coordenador: \(gastoCargoCoordenador)".
         // \n = Quebra de linha
         // Não precisa seguir exatamente esse modelo. Foi só um exemplo.
+        outputMessage.text = ""
+        for cargo in Cargo.allCases{
+            outputMessage.text! += "\(escola.listaQuantidadeDeColaborador(porCargo: cargo))\n"
+        }
+        
     }
     
     @IBAction func listarNomesColaboradoresOrdemAlfabetica(_ sender: UIButton) {
