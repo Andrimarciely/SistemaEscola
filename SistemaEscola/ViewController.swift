@@ -136,9 +136,9 @@ class ViewController: UIViewController {
         
         // No exemplo do .playgrounds, a gente tem uma função que retorna um Array de String ([String]).
         // Basta fazer como no exemplo abaixo:
-        // let nomes = <sua função que retorna todos os nomes ordenados em um Array de [String]>
-        // let nomesJuntos = nomes.joined(separator: ", ")
-        // outputMessage.text = newSentence
+        let nomes = escola.listaColaboradoresEmOrdemAlfabetica()
+        let nomesJuntos = nomes.joined(separator: ", ")
+        outputMessage.text = nomesJuntos
         // Dei colherinha de chá aqui hein 🥄☕️.
     }
     

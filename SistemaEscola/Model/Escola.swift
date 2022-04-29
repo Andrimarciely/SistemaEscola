@@ -47,4 +47,14 @@ struct Escola {
         
         return "Existe(m) \(quantidade) colaborador(es) do cargo \(cargo.rawValue)."
     }
+    
+    // Funcionalidade 6 do sistema da escola
+    // Listar os nomes de todos os colaboradores em ordem alfabética
+    func listaColaboradoresEmOrdemAlfabetica() -> [String] {
+         
+         let nomes: [String] = self.colaboradores.map{$0.nome}.sorted()
+         
+         return nomes
+         
+     }
 }
