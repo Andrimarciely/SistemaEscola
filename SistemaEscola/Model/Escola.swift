@@ -2,11 +2,20 @@
 //  Escola.swift
 //  SistemaEscola
 //
-//  Created by Aluno01 on 29/04/22.
+//  Adaptado by Andrimarciely on 29/04/22.
 //  Copyright © 2022 Eldorado. All rights reserved.
 //
 
+
 import Foundation
+
+// Converter Int em Bool
+extension Int {
+    
+    var valorBooleano: Bool {return self != 0 }
+    
+}
+
 
 struct Escola {
 

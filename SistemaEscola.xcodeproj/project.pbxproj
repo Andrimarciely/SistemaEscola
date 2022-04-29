@@ -17,6 +17,7 @@
 		A51BCDD5281C514500248041 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDD4281C514500248041 /* Cargo.swift */; };
 		A51BCDD7281C51F500248041 /* Colaborador.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDD6281C51F500248041 /* Colaborador.swift */; };
 		A51BCDD9281C523E00248041 /* Escola.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDD8281C523E00248041 /* Escola.swift */; };
+		A51BCDDB281C97D700248041 /* DadoInvalido.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BCDDA281C97D700248041 /* DadoInvalido.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A51BCDD4281C514500248041 /* Cargo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo.swift; sourceTree = "<group>"; };
 		A51BCDD6281C51F500248041 /* Colaborador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colaborador.swift; sourceTree = "<group>"; };
 		A51BCDD8281C523E00248041 /* Escola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Escola.swift; sourceTree = "<group>"; };
+		A51BCDDA281C97D700248041 /* DadoInvalido.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadoInvalido.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				A51BCDD4281C514500248041 /* Cargo.swift */,
 				A51BCDD6281C51F500248041 /* Colaborador.swift */,
 				A51BCDD8281C523E00248041 /* Escola.swift */,
+				A51BCDDA281C97D700248041 /* DadoInvalido.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				A51BCDD5281C514500248041 /* Cargo.swift in Sources */,
 				2353626427BADDD100A00A78 /* ViewControllerExtension.swift in Sources */,
 				A51BCDD7281C51F500248041 /* Colaborador.swift in Sources */,
+				A51BCDDB281C97D700248041 /* DadoInvalido.swift in Sources */,
 				237BA05D27B70CB200E814B8 /* ViewController.swift in Sources */,
 				A51BCDD9281C523E00248041 /* Escola.swift in Sources */,
 				237BA05927B70CB200E814B8 /* AppDelegate.swift in Sources */,
