@@ -9,8 +9,12 @@
 import UIKit
 
 // Sugiro que utilizem esse Enum pois eu já deixei preparado para os botões, mas sintam-se à vontade para alterar para uma estrutura melhor caso sintam essa necessidade.
-enum Cargo {
-    case monitor, professor, coordenador, diretor, assistente
+enum Cargo: String, CaseIterable {
+    case monitor = "Monitor"
+    case professor = "Professor"
+    case coordenador = "Coordenador"
+    case diretor = "Diretor"
+    case assistente = "Assistente"
 }
 
 class ViewController: UIViewController {
