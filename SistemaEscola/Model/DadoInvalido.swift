@@ -22,7 +22,7 @@ enum DadoInvalido: String {
         case .quantidadeDiretor:
             return "Essa escola já possui um diretor. Por favor, adicione colaborador com outro cargo. "
         case .salarioDiretor:
-            return "Salário está acima do teto salarial permitido. Por favor, revise valores"
+            return "Salário está acima do teto ou abaixo do piso salarial permitido. Por favor, revise valores"
         case .quantidadeCoordenador:
             return "Essa escola já tem coordenadores suficientes para o corpo docente.  Por favor, adicione colaborador com outro cargo."
         default:

@@ -8,6 +8,11 @@
 
 import UIKit
 
+extension String {
+    var doubleValue: Double {
+        return Double(self) ?? 0
+    }
+}
 
 let algunsColaboradores: [Colaborador] = [
     Colaborador(nome: "Beatriz Viana", matricula: "1", salario: 1000, cargo: .assistente),
@@ -60,17 +65,15 @@ class ViewController: UIViewController {
     
     @IBAction func cadastrarColaborador(_ sender: UIButton) {
         // TODO: Inserir Feature 1 Aqui!
-        let novoColaborador: Colaborador = Colaborador(nome: nomeTextField.text ?? "", matricula: matriculaTextField.text ?? "", salario: 1000 , cargo: cargoSelecionado)
+        let novoColaborador: Colaborador = Colaborador(nome: nomeTextField.text ?? "", matricula: matriculaTextField.text ?? "", salario: salarioTextField.text?.doubleValue ?? 0 , cargo: cargoSelecionado)
         
-    let mensagem = escola.self.adicionaColaboradorComValidacao(novoColaborador: novoColaborador)
+        let mensagem = escola.self.adicionaColaboradorComValidacao(novoColaborador: novoColaborador)
         
-        // Coloque uma lista ordenada de colaboradores (apenas com os nomes) na propriedade 'outputMessage'! (Assim, a gente consegue ver que de fato o colaborador foi cadastrado)
-        // Basta fazer:
         if mensagem == ""{
             outputMessage.text = ""
             let nomes = escola.listaColaboradoresEmOrdemAlfabetica()
             let nomesJuntos = nomes.joined(separator: ", ")
-        outputMessage.text = nomesJuntos
+            outputMessage.text = nomesJuntos
         }
         else {
             outputMessage.text = mensagem
