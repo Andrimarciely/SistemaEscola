@@ -4,7 +4,7 @@
 //
 //  Created by Renan Trévia on 2/11/22.
 //  Copyright © 2022 Eldorado. All rights reserved.
-//
+//  Edited by Andrimarciely May 1st
 
 import UIKit
 
@@ -16,7 +16,8 @@ extension String {
 
 let algunsColaboradores: [Colaborador] = [
     Colaborador(nome: "Beatriz Viana", matricula: "1", salario: 1000, cargo: .assistente),
-    Colaborador(nome: "Luiz Miguel Rezende", matricula: "2", salario: 1200, cargo: .monitor)]
+    Colaborador(nome: "Luiz Miguel Rezende", matricula: "2", salario: 1200, cargo: .monitor),
+    Colaborador(nome: "Isaac Gonçalves", matricula: "5", salario: 1600, cargo: .professor)]
 
 var escola = Escola(colaboradores: algunsColaboradores)
 
@@ -84,9 +85,9 @@ class ViewController: UIViewController {
     
     @IBAction func removerColaborador(_ sender: UIButton) {
         // TODO: Inserir Feature 2 Aqui!
-        // Coloque uma lista ordenada de colaboradores (apenas com os nomes) na propriedade 'outputMessage'! (Assim, a gente consegue ver que de fato o colaborador foi removido)
-        // Basta fazer:
-        // outputMessage.text = "A sua mensagem aqui"
+        let matricula = matriculaTextField.text
+        
+        escola.colaboradores.removeAll{$0.matricula == matricula}
         
         // Importante deixar essa função como última porque ela reseta o sistema por estado inicial.
         resetaRemoveColaborador()
@@ -94,26 +95,13 @@ class ViewController: UIViewController {
     
     @IBAction func listarGastosMensaisComTodosColaboradores(_ sender: UIButton) {
         // TODO: Inserir Feature 3 Aqui!
-        // Coloque a mensagem na propriedade 'outputMessage'!
-        // Basta fazer:
+
         outputMessage.text = "Total de Gastos Mensais na escola é de R$\(escola.self.gastosMensais())"
     }
     
     @IBAction func listarGastosMensaisPorCargo(_ sender: UIButton) {
         // TODO: Inserir Feature 4 Aqui!
-        // Você pode utilizar a propriedade 'cargoSelecionado' para escolher listar um cargo só.
-        // Coloque a mensagem na propriedade 'outputMessage'!
-        // Basta fazer:
-        // outputMessage.text = escola.listaGasto(porCargo: cargoSelecionado)
-        
-        // Você pode também listar todos os cargos (ao invés de somente um), se assim preferir.
-        // Basta fazer:
-        // let gastoCargoMonitor = <sua função que calcula esse gasto>
-        // let gastoCargoProfessor = <sua função que calcula esse gasto>
-        // let gastoCargoCoordenador = <sua função que calcula esse gasto>
-        // let todosOsGastos = "Monitor: \(gastoCargoMonitor) \nProfessor: \(gastoCargoProfessor)\n Coordenador: \(gastoCargoCoordenador)".
-        // \n = Quebra de linha
-        // Não precisa seguir exatamente esse modelo. Foi só um exemplo.
+
         outputMessage.text = ""
         for cargo in Cargo.allCases{
             outputMessage.text! += "\(escola.listaGasto(porCargo: cargo))\n"
@@ -122,19 +110,6 @@ class ViewController: UIViewController {
     
     @IBAction func listarQuantasPessoasExistemPorCargo(_ sender: UIButton) {
         // TODO: Inserir Feature 5 Aqui!
-        // Você pode utilizar a propriedade 'cargoSelecionado' para escolher listar a quantidade de pessoas em um cargo só.
-        // Coloque a mensagem na propriedade 'outputMessage'!
-        // Basta fazer:
-        // outputMessage.text = "A sua mensagem aqui"
-        
-        // Você pode também listar a quantidade de pessoas nos cargos (ao invés de somente um), se assim preferir.
-        // Basta fazer:
-        // let pessoasCargoMonitor = <sua função que conta quantas pessoas nesse cargo>
-        // let pessoasCargoProfessor = <sua função que conta quantas pessoas nesse cargo>
-        // let pessoasCargoCoordenador = <sua função que conta quantas pessoas nesse cargo>
-        // let todosAsPessoas = "Monitor: \(gastoCargoMonitor) \nProfessor: \(gastoCargoProfessor)\n Coordenador: \(gastoCargoCoordenador)".
-        // \n = Quebra de linha
-        // Não precisa seguir exatamente esse modelo. Foi só um exemplo.
         outputMessage.text = ""
         for cargo in Cargo.allCases{
             outputMessage.text! += "\(escola.listaQuantidadeDeColaborador(porCargo: cargo))\n"
@@ -144,16 +119,14 @@ class ViewController: UIViewController {
     
     @IBAction func listarNomesColaboradoresOrdemAlfabetica(_ sender: UIButton) {
         // TODO: Inserir Feature 6 Aqui!
-        // Coloque a mensagem na propriedade 'outputMessage'!
-        // Basta fazer:
-        // outputMessage.text = "A sua mensagem aqui"
+
         
         // No exemplo do .playgrounds, a gente tem uma função que retorna um Array de String ([String]).
         // Basta fazer como no exemplo abaixo:
         let nomes = escola.listaColaboradoresEmOrdemAlfabetica()
         let nomesJuntos = nomes.joined(separator: ", ")
         outputMessage.text = nomesJuntos
-        // Dei colherinha de chá aqui hein 🥄☕️.
+        // Dei colherinha de chá aqui hein 🥄☕️ Obrigada. [=.
     }
     
 }
